@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            border: none;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-btn img {
+            width: 300px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .forms-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .search-form {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form.active {
+            display: flex;
+        }
+
+        .search-form input, .search-form select {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Add this CSS for the top-right button */
+        .best-price-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .best-price-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Best Price Button -->
+    <a href="https://www.google.com/travel/flights?tfs=CBwQARojEgoyMDI0LTA5LTEwagcIARIDSFlEcgwIAxIIL20vMGZuYjQaIxIKMjAyNC0xMC0wNmoMCAMSCC9tLzBmbmI0cgcIARIDSFlEQAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en&gl=IN" class="best-price-btn">
+        Best Price
+    </a>
+
+    <div class="hero">
+        <div class="search-container">
+            <div class="cta-btns">
+                <button class="cta-btn" onclick="showSearchForm('flight')">
+                    <img src="plane.jpeg" alt="Book a Flight">
+                    Book a Flight
+                </button>
+                <button class="cta-btn" onclick="showSearchForm('bus')">
+                    <img src="bus.jpeg" alt="Book a Bus">
+                    Book a Bus
+                </button>
+                <button class="cta-btn" onclick="showSearchForm('train')">
+                    <img src="train.avif" alt="Book a Train">
+                    Book a Train
+                </button>
+            </div>
+
+            <div class="forms-container">
+                <form id="flight-form" class="search-form" onsubmit="submitFlightForm(event)">
+                    <h3>Search Flights</h3>
+                    <input type="text" id="flight-departure" placeholder="Enter Departure City">
+                    <input type="text" id="flight-destination" placeholder="Enter Destination City">
+                    <input type="date" id="flight-departure-date" placeholder="Departure Date">
+                    <input type="date" id="flight-return-date" placeholder="Return Date">
+                    <select id="flight-class">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                    </select>
+                    <button type="submit">Search Flights</button>
+                </form>
+
+                <form id="bus-form" class="search-form" onsubmit="submitBusForm(event)">
+                    <h3>Search Buses</h3>
+                    <input type="text" id="bus-departure" placeholder="Enter Departure City">
+                    <input type="text" id="bus-destination" placeholder="Enter Destination City">
+                    <input type="date" id="bus-date" placeholder="Travel Date">
+                    <select id="bus-type">
+                        <option value="volvo">Volvo</option>
+                        <option value="sleeper">Sleeper</option>
+                    </select>
+                    <button type="submit">Search Buses</button>
+                </form>
+
+                <form id="train-form" class="search-form" onsubmit="submitTrainForm(event)">
+                    <h3>Search Trains</h3>
+                    <input type="text" id="train-departure" placeholder="Enter Departure Station">
+                    <input type="text" id="train-destination" placeholder="Enter Destination Station">
+                    <input type="date" id="train-date" placeholder="Travel Date">
+                    <select id="train-class">
+                        <option value="sleeper">Sleeper</option>
+                        <option value="ac">AC</option>
+                    </select>
+                    <button type="submit">Search Trains</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSearchForm(type) {
+            const forms = document.querySelectorAll('.search-form');
+            forms.forEach(form => form.classList.remove('active'));
+
+            if (type === 'flight') {
+                document.getElementById('flight-form').classList.add('active');
+            } else if (type === 'bus') {
+                document.getElementById('bus-form').classList.add('active');
+            } else if (type === 'train') {
+                document.getElementById('train-form').classList.add('active');
+            }
+        }
+
+        function submitFlightForm(event) {
+            event.preventDefault();
+            const departure = document.getElementById('flight-departure').value;
+            const destination = document.getElementById('flight-destination').value;
+            const departureDate = document.getElementById('flight-departure-date').value;
+            const returnDate = document.getElementById('flight-return-date').value;
+            const flightClass = document.getElementById('flight-class').value;
+
+            window.location.href = `https://www.air.irctc.co.in?departure=${departure}&destination=${destination}&departureDate=${departureDate}&returnDate=${returnDate}&class=${flightClass}`;
+        }
+
+        function submitBusForm(event) {
+            event.preventDefault();
+            const departure = document.getElementById('bus-departure').value;
+            const destination = document.getElementById('bus-destination').value;
+            const date = document.getElementById('bus-date').value;
+            const busType = document.getElementById('bus-type').value;
+
+            window.location.href = `https://www.tsrtconline.in/oprs-web?departure=${departure}&destination=${destination}&date=${date}&type=${busType}`;
+        }
+
+        function submitTrainForm(event) {
+            event.preventDefault();
+            const departure = document.getElementById('train-departure').value;
+            const destination = document.getElementById('train-destination').value;
+            const date = document.getElementById('train-date').value;
+            const trainClass = document.getElementById('train-class').value;
+
+            window.location.href = `https://www.irctc.co.in/nget/train-search?departure=${departure}&destination=${destination}&date=${date}&class=${trainClass}`;
+        }
+        
+    </script>
+</body>
+</html>
