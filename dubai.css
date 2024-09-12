@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(216, 216, 139);
+}
+
+/* Destination Cards Container */
+.destination-cards {
+    display: flex;
+    justify-content: space-between; /* Adjust space between cards */
+    flex-wrap: wrap; /* Ensures cards wrap to the next line if necessary */
+    gap: 20px; /* Adds space between cards */
+    margin: 50px 0;
+    padding: 0 20px; /* Adds padding for mobile devices */
+}
+
+/* Card Styling */
+.card {
+    width: 230px; /* Set default width for the card */
+    height: 380px;
+    padding: 15px; /* Add padding inside the card */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better appearance */
+    text-align: center;
+    background-color: rgb(166, 201, 99);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-10px); /* Moves card up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow on hover */
+}
+
+/* Card Image Styling */
+.card img {
+    width: 100%; /* Ensures the image takes up the entire card width */
+    height: 200px; /* Set fixed height for images */
+    border-radius: 10px; /* Same border-radius as card for uniformity */
+    object-fit: cover; /* Ensures image covers area without distortion */
+    margin-bottom: 10px;
+}
+
+/* Card text styling */
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        width: 180px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-cards {
+        justify-content: center; 
+        gap: 15px;
+    }
+    .card {
+        width: 45%; 
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+}
+.beach{
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: rgb(226, 43, 98);
+}
+.location {
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+p {
+    font-size: 0.25rem;
+    opacity: 0.75;
+
+}
+.paris .destination-cards {
+    margin-top: none;
+
+}
+.curr {
+    display: flex;
+    text-decoration: none;
+    flex-direction: row-reverse;
+    color: rgb(226, 43, 98);
+    font-size: 1.25rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
