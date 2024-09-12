@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('path_to_background_image.png');
+    background-size: cover;
+    background-position: center;
+}
+/* style2.css */
+
+.hero {
+    background-image: url('pl.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensures the hero section covers the full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px; /* Further increased gap between buttons */
+}
+
+.cta-btn {
+    padding: 25px 50px; /* Larger padding for even bigger buttons */
+    font-size: 22px; /* Larger font size */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; /* Larger border radius */
+    background-color: black;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cta-btn img {
+    width: 340px; /* Larger image width */
+    height: 240px; /* Larger image height */
+    display: block;
+    margin: 0 auto 20px; /* Increased margin below the image */
+}
+
+.cta-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    background-color: black; /* Brightens the background on hover */
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    outline: none;
+  }
+  body {
+    background-color: #9873fe;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 25em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 2em;
+    border-radius: 0.8em;
+  }
+  .app-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .app-icon {
+    width: 9.37em;
+  }
+  .app-title {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+  }
+  input#amount {
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: #7a789d;
+    margin-bottom: 2em;
+    padding: 0.5em;
+  }
+  input#amount:focus {
+    color: #9873fe;
+    border-color: #9873fe;
+  }
+  .dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  select {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 20px 20px;
+    background-color: #9873fe;
+    color: #ffffff;
+  }
+  select option {
+    background-color: #ffffff;
+    color: #02002c;
+  }
+  button {
+    font-size: 1em;
+    width: 100%;
+    background-color: #9873fe;
+    padding: 1em 0;
+    margin-top: 2em;
+    border-radius: 0.3em;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  #result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    color: #02002c;
+    background-color: #e5dbff;
+    padding: 0.8em 0;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    outline: none;
+  }
+  body {
+    background-color: #9873fe;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 25em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 2em;
+    border-radius: 0.8em;
+  }
+  .app-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .app-icon {
+    width: 9.37em;
+  }
+  .app-title {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+  }
+  input#amount {
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: #7a789d;
+    margin-bottom: 2em;
+    padding: 0.5em;
+  }
+  input#amount:focus {
+    color: #9873fe;
+    border-color: #9873fe;
+  }
+  .dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  select {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 20px 20px;
+    background-color: #9873fe;
+    color: #ffffff;
+  }
+  select option {
+    background-color: #ffffff;
+    color: #02002c;
+  }
+  button {
+    font-size: 1em;
+    width: 100%;
+    background-color: #9873fe;
+    padding: 1em 0;
+    margin-top: 2em;
+    border-radius: 0.3em;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  #result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    color: #02002c;
+    background-color: #e5dbff;
+    padding: 0.8em 0;
+  }
+.currency-selector {
+    margin: 20px 0;
+}
+
+#currencyDropdown {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%; /* Adjust based on your layout */
+    max-width: 300px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(119, 201, 201);
+}
+
+/* Destination Cards Container */
+.destination-cards {
+    display: flex;
+    justify-content: space-between; /* Adjust space between cards */
+    flex-wrap: wrap; /* Ensures cards wrap to the next line if necessary */
+    gap: 20px; /* Adds space between cards */
+    margin: 50px 0;
+    padding: 0 20px; /* Adds padding for mobile devices */
+}
+
+/* Card Styling */
+.card {
+    width: 240px; /* Set default width for the card */
+    height: 350px;
+    padding: 15px; /* Add padding inside the card */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better appearance */
+    text-align: center;
+    background-color: rgb(236, 239, 234);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-10px); /* Moves card up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow on hover */
+}
+
+/* Card Image Styling */
+.card img {
+    width: 100%; /* Ensures the image takes up the entire card width */
+    height: 200px; /* Set fixed height for images */
+    border-radius: 10px; /* Same border-radius as card for uniformity */
+    object-fit: cover; /* Ensures image covers area without distortion */
+    margin-bottom: 10px;
+}
+
+/* Card text styling */
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        width: 180px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-cards {
+        justify-content: center; 
+        gap: 15px;
+    }
+    .card {
+        width: 45%; 
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+}
+.beach{
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: rgb(142, 19, 242)
+}
+.location {
+    font-size: 0.75rem;
+    text-decoration: none;
+}
